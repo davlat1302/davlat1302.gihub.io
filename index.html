@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Travel with us</title>
+</head>
+<body>
+    <section>
+        <div class="bannerVideo" id="slideShow">
+            <video src="pic/video/austria.mp4" autoplay muted loop class="active"></video>
+            <video src="pic/video/france.mp4" autoplay muted loop></video>
+            <video src="pic/video/germany.mp4" autoplay muted loop></video>
+            <video src="pic/video/USA.mp4" autoplay muted loop></video>
+        </div>
+        <div class="container">
+            <header id="navbar">
+                <a href="#" class="logo">adventour</a>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="pag/destination.html">Destination</a></li>
+                    <li><a href="pag/tours.html">Tours</a></li>
+                    <li><a href="pag/about.html">About</a></li>
+                    <li><a href="pag/contact.html">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="bannerText" id="slideShowText">
+                    <div class="active">
+                        <h2>Austria</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, doloribus. Dolorum reprehenderit ex minus adipisci, autem eius, rem quisquam laudantium eligendi voluptatum magni iste ea, iusto assumenda vero tempore voluptatibus.</p>
+                    </div>
+                    <div>
+                        <h2>France</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, doloribus. Dolorum reprehenderit ex minus adipisci, autem eius, rem quisquam laudantium eligendi voluptatum magni iste ea, iusto assumenda vero tempore voluptatibus.</p>
+                    </div>
+                    <div>
+                        <h2>Germany</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, doloribus. Dolorum reprehenderit ex minus adipisci, autem eius, rem quisquam laudantium eligendi voluptatum magni iste ea, iusto assumenda vero tempore voluptatibus.</p>
+                    </div>
+                    <div>
+                        <h2>USA</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, doloribus. Dolorum reprehenderit ex minus adipisci, autem eius, rem quisquam laudantium eligendi voluptatum magni iste ea, iusto assumenda vero tempore voluptatibus.</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sci">
+                <li><a href="#"><img src="pic/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="pic/instagram.png" alt=""></a></li>
+            </ul>
+
+            <ul class="controls">
+                <li onclick="prevSlide();nextSlideText();"><img src="pic/left-arrow.png" alt=""></li>
+                <li onclick="nextSlide();nextSlideText();"><img src="pic/right-arrows.png" alt=""></li>
+            </ul>
+
+        </div>
+    </section>
+
+    <script>
+        const slideShow = document.getElementById('slideShow');
+const slides = slideShow.getElementByTagName('video');
+var index= 0;
+
+function nextSlide(){
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}
+
+function prevSlide(){
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+}
+
+
+
+
+const slideShowText = document.getElementById('slideShowText');
+const slidesText = slideShowText.getElementByTagName('div');
+var i= 0;
+
+function nextSlideText(){
+    slidesText[i].classList.remove('active');
+    i = (i + 1) % slidesText.length;
+    slidesText[i].classList.add('active');
+}
+
+function prevSlideText(){
+    slidesText[i].classList.remove('active');
+    i = (i - 1 + slidesText.length) % slidesText.length;
+    slidesText[i].classList.add('active');
+}
+    </script>
+
+</body>
+</html>

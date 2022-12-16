@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+section
+{
+    width: 100%;
+    height: 100vh;
+    padding: 180px 0 0;
+    background: black;
+}
+
+section .card
+{
+    position: relative;
+    max-width: 350px;
+    height: auto;
+    padding: 50px 20px;
+    background: #ff0;
+    border-radius: 10px;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+section .col-sm-4:nth-child(1) .card
+{
+    background: #3fc012;
+}
+
+section .col-sm-4:nth-child(2) .card
+{
+    background: #f1206a;
+}
+
+section .col-sm-4:nth-child(3) .card
+{
+    background: #0f84d4;
+}
